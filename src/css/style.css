@@ -1,3 +1,358 @@
-p {
-    color: red;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --white-color: #e6e8e6;
+  --black-color: #080708;
+  --light-gray-color: #bcbec0;
+  --dark-gray-color: #5b5d5f;
+  --blue-color: #648de5;
+  --dark-blue-color: #102542;
+  --orange-color: #f87060;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  background-image: url(../img/background-large.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 650px;
+}
+
+.photo-container {
+  background-image: url(../img/person-large.jpg);
+  background-position: center;
+  background-size: cover;
+  min-width: 550px;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
+  margin: 50px 0 50px 100px;
+  float: left;
+  z-index: 1;
+}
+
+#name-title {
+  margin: 32px;
+  font-size: 4rem;
+  color: var(--white-color);
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 75px 100px 75px 0;
+  padding: 32px;
+  padding-left: 50px;
+  background-color: var(--white-color);
+  font-size: 1.8rem;
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  font-size: 2.7rem;
+  font-weight: 600;
+}
+
+.content {
+  color: var(--dark-gray-color);
+}
+
+.about-me > .icons {
+  margin-top: 32px;
+  gap: 50px;
+}
+
+.icons {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.icon {
+  width: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  padding: 75px;
+}
+
+main > .title {
+  margin: 32px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+  margin: 0 32px 32px 32px;
+}
+
+.project {
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+.project img {
+  max-width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.description {
+  margin: 0 32px 32px 32px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.project .title {
+  font-size: 2rem;
+  margin: 16px 0;
+}
+
+main .icons {
+  gap: 10px;
+  align-items: center;
+}
+
+main .icon {
+  width: 25px;
+}
+
+.project .content {
+  color: var(--dark-gray-color);
+  line-height: 1.5;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../img/background-small.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px;
+  gap: 32px;
+}
+
+footer .icons {
+  gap: 50px;
+}
+
+footer .icon {
+  width: 75px;
+}
+
+footer .title {
+  font-size: 3rem;
+}
+
+footer .content {
+  color: var(--black-color);
+  font-size: 1.2rem;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 4rem;
+  line-height: 1.5;
+}
+
+#info .content {
+  font-size: 2rem;
+}
+
+footer picture > img {
+  display: flex;
+  max-width: 600px;
+  float: right;
+  margin: 50px;
+}
+
+@media (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/background-small.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .photo-container {
+    background-image: url(../img/person-small.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 32px;
+    max-width: 500px;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
+    position: static;
+  }
+
+  #name-title {
+    margin: 32px;
+    font-size: 4rem;
+    color: var(--white-color);
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px;
+    padding: 32px;
+    background-color: var(--white-color);
+    font-size: 1.8rem;
+    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .title {
+    font-size: 2.7rem;
+    font-weight: 600;
+  }
+
+  .about-me > .title {
+    margin-bottom: 32px;
+  }
+
+  .content {
+    color: var(--dark-gray-color);
+  }
+
+  .about-me > .icons {
+    margin-top: 32px;
+    gap: 50px;
+  }
+
+  .icons {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  .icon {
+    width: 50px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+  }
+
+  main > .title {
+    margin: 32px;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+    margin: 0 32px 32px 32px;
+  }
+
+  .project {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .project img {
+    max-width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .description {
+    margin: 0 32px 32px 32px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .project .title {
+    font-size: 2rem;
+    margin: 16px 0;
+  }
+
+  main .icons {
+    gap: 10px;
+    align-items: center;
+  }
+
+  main .icon {
+    width: 25px;
+  }
+
+  .project .content {
+    color: var(--dark-gray-color);
+    line-height: 1.5;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/background-small.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 32px;
+  }
+
+  footer .icons {
+    gap: 50px;
+  }
+
+  footer .content {
+    color: var(--black-color);
+    font-size: 1.2rem;
+  }
+
+  #info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #info > :nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  footer picture > img {
+    display: none;
+  }
 }
