@@ -14,6 +14,11 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
 header {
   display: flex;
   background-image: url(../img/background-large.jpg);
@@ -26,7 +31,7 @@ header {
   background-image: url(../img/person-large.jpg);
   background-position: center;
   background-size: cover;
-  min-width: 550px;
+  max-width: 550px;
   min-height: 550px;
   display: flex;
   justify-content: center;
@@ -38,7 +43,8 @@ header {
 }
 
 #name-title {
-  margin: 32px;
+  margin: 32px 75px;
+  white-space: nowrap;
   font-size: 4rem;
   color: var(--white-color);
 }
@@ -47,7 +53,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  gap: 32px;
   margin: 75px 100px 75px 0;
   padding: 32px;
   padding-left: 50px;
@@ -66,7 +72,6 @@ header {
 }
 
 .about-me > .icons {
-  margin-top: 32px;
   gap: 50px;
 }
 
@@ -141,7 +146,7 @@ main .icon {
 footer {
   display: flex;
   justify-content: space-between;
-  background-image: url(../img/background-small.jpg);
+  background-image: url(../img/background-large.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -191,161 +196,63 @@ footer picture > img {
   margin: 50px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   header {
-    display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url(../img/background-small.jpg);
-    background-position: center;
-    background-size: cover;
   }
 
   .photo-container {
     background-image: url(../img/person-small.jpg);
-    background-position: center;
-    background-size: cover;
     margin: 32px;
     max-width: 500px;
-    min-height: 500px;
-    display: flex;
-    align-items: flex-end;
-    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
+    min-height: 400px;
     position: static;
   }
 
   #name-title {
     margin: 32px;
-    font-size: 4rem;
-    color: var(--white-color);
   }
 
   .about-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 32px;
-    padding: 32px;
-    background-color: var(--white-color);
-    font-size: 1.8rem;
-    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
-  }
-
-  .title {
-    font-size: 2.7rem;
-    font-weight: 600;
-  }
-
-  .about-me > .title {
-    margin-bottom: 32px;
-  }
-
-  .content {
-    color: var(--dark-gray-color);
-  }
-
-  .about-me > .icons {
-    margin-top: 32px;
-    gap: 50px;
-  }
-
-  .icons {
-    display: grid;
-    grid-auto-flow: column;
-  }
-
-  .icon {
-    width: 50px;
   }
 
   main {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white-color);
-  }
-
-  main > .title {
-    margin: 32px;
-  }
-
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 50px;
-    margin: 0 32px 32px 32px;
-  }
-
-  .project {
-    background-color: var(--white-color);
-    border-radius: 8px;
-    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
-  }
-
-  .project img {
-    max-width: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-
-  .description {
-    margin: 0 32px 32px 32px;
-  }
-
-  .top {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  .project .title {
-    font-size: 2rem;
-    margin: 16px 0;
-  }
-
-  main .icons {
-    gap: 10px;
-    align-items: center;
-  }
-
-  main .icon {
-    width: 25px;
+    padding: 0 32px;
   }
 
   .project .content {
+    font-size: 1.4rem;
     color: var(--dark-gray-color);
-    line-height: 1.5;
+    line-height: 1.3;
   }
 
   footer {
-    display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url(../img/background-small.jpg);
-    background-position: center;
-    background-size: cover;
+  }
+
+  footer .title {
+    font-size: 2rem;
+  }
+
+  footer .icon {
+    width: 50px;
   }
 
   .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 32px;
-    gap: 32px;
-  }
-
-  footer .icons {
-    gap: 50px;
-  }
-
-  footer .content {
-    color: var(--black-color);
-    font-size: 1.2rem;
   }
 
   #info {
-    display: flex;
-    flex-direction: column;
     gap: 16px;
+  }
+
+  #info .content {
+    font-size: 1.2rem;
   }
 
   #info > :nth-child(1) {
@@ -354,5 +261,65 @@ footer picture > img {
 
   footer picture > img {
     display: none;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  header {
+    background-image: url(../img/background-medium.jpg);
+  }
+
+  .photo-container {
+    background-image: url(../img/person-medium.jpg);
+    max-width: 500px;
+    max-height: 400px;
+    float: left;
+    margin: 50px;
+    margin-right: -75px;
+  }
+
+  #name-title {
+    margin: 32px;
+  }
+
+  .about-me {
+    margin: 50px;
+    margin-top: 75px;
+    font-size: 1.6rem;
+  }
+
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/background-small.jpg);
+  }
+
+  footer .title {
+    font-size: 2rem;
+  }
+
+  footer .icon {
+    width: 50px;
+  }
+
+  .footer-content {
+    padding: 32px;
+  }
+
+  #info {
+    gap: 16px;
+  }
+
+  #info .content {
+    font-size: 1.2rem;
+  }
+
+  #info > :nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  footer picture > img {
+    display: flex;
   }
 }
